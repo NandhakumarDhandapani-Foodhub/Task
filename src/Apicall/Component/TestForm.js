@@ -1,18 +1,43 @@
 import React from 'react'
-import {Form} from "antd";
+import {Card, Form, Input} from "antd";
 
 
 const TestForm = ({formik}) => {
     return (
         <>
-           <Form>
-               <Form.Item
-                label = {'front'}
-               >
-                   type={'name'}
-                   onChange={formik.handleChange}
-               </Form.Item>
-           </Form>
+            <Card>
+                <Form>
+                    <Form.Item label={'front'}>
+                        <Input
+                            //onChange={formik.handleChange}
+                            value={formik.values.tests}
+                            placeholder={'input'}
+                        />
+                        type={'name'}
+
+                    </Form.Item>
+
+                    <Form.Item label={'front'}>
+                        <Input
+                            //onChange={formik.handleChange}
+                            value={formik.values.tests}
+                            placeholder={'input'}
+                        />
+                        type={'name'}
+
+                    </Form.Item>
+
+                    <Form.Item label={'front'}>
+                        <Input
+                            //onChange={formik.handleChange}
+                            value={formik.values.tests}
+                            placeholder={'input'}
+                        />
+                        type={'name'}
+
+                    </Form.Item>
+                </Form>
+            </Card>
 
         </>
     )

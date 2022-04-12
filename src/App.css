@@ -1,5 +1,20 @@
 .App {
   text-align: center;
+    padding:70px
+}
+h2{margin:5px;}
+h3{margin:45px;}
+h4{margin:45px;}
+h5{margin:45px;}
+
+Button{
+  background-color:#0a0a23;
+  color: #fff;
+  border:none;
+  border-radius:10px;
+  padding:9px;
+  min-height:20px;
+  min-width: 70px;
 }
 
 .App-logo {
