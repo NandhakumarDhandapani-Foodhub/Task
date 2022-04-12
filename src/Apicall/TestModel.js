@@ -6,6 +6,7 @@ const TestModel = {
         tests: [],
         error: null,
         isLoading: false,
+        display: []
 
     },
     reducers: {
@@ -17,6 +18,9 @@ const TestModel = {
         },
         error: (state, payload) => {
             return {...state, error: payload.message}
+        },
+        display: (state, payload) => {
+            return {...state, display: payload.display}
         }
     },
     effects: (dispatch) => ({
@@ -41,12 +45,19 @@ const TestModel = {
                 .catch((error) => {
                     dispatch.tests.error({
                         message: error.message
-
                     })
 
                 })
-        }
-    })
+        },
+        getDisplay: async (data) => {
+            dispatch.tests.loading({isLoading: true});
+            dispatch.tests.loading({isLoading: false});
+            dispatch.tests.display({
+                display: data,
+            });
+        },
+    }),
+
 
 }
 
